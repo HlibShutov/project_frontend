@@ -4,6 +4,7 @@ import {useState} from "react";
 import MyItem from "@/components/item.tsx";
 import { TooltipProvider } from "@/components/ui/tooltip"
 import MyTooltip from "@/components/tooltip.tsx";
+import MyChart from "@/components/chart.tsx";
 
 function App() {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +15,8 @@ function App() {
             <MyDrawer isOpen={isOpen} setIsOpen={setIsOpen}></MyDrawer>
             <div className="border border-black h-50"></div>
             <TooltipProvider><MyTooltip></MyTooltip></TooltipProvider>
+            <div className="border border-black h-50"></div>
+            <MyChart></MyChart>
         </main>
     )
 }
