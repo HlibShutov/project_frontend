@@ -8,7 +8,7 @@ import {Button} from "@/components/ui/button.tsx";
 
 function MyItem({isOpen, setIsOpen}: {isOpen: boolean, setIsOpen: (isOpen: boolean) => void}) {
     return (
-    <Item className="bg-gray-500">
+    <Item>
         <ItemContent>
             <ItemTitle>Crazy item</ItemTitle>
             <ItemDescription className="text-black">Action opens drawer</ItemDescription>

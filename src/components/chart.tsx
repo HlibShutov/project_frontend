@@ -3,7 +3,7 @@ import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
 
 const chartConfig = {
     y: {
-        label: "Desktop",
+        label: "y",
         color: "#2563eb",
     },
 } satisfies ChartConfig
