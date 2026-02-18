@@ -9,13 +9,13 @@ import {
     DrawerHeader,
     DrawerTitle,
 } from "@/components/ui/drawer"
-function MyDrawer({isOpen, setIsOpen}: {isOpen: boolean, setIsOpen: (isOpen: boolean) => void}) {
+function MyDrawer({label, isOpen, setIsOpen}: {label: string, isOpen: boolean, setIsOpen: (isOpen: boolean) => void}) {
     return (
         <Drawer open={isOpen} onOpenChange={setIsOpen} direction={'right'}>
             <DrawerTrigger>Open drawer</DrawerTrigger>
             <DrawerContent>
                 <DrawerHeader>
-                    <DrawerTitle>Some title</DrawerTitle>
+                    <DrawerTitle>{label}</DrawerTitle>
                     <DrawerDescription>Some description</DrawerDescription>
                 </DrawerHeader>
                 <DrawerFooter>

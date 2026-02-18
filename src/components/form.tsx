@@ -49,11 +49,11 @@ function MyForm() {
 
     return (
         <FormProvider {...form}>
-        <form id="my-form" onSubmit={form.handleSubmit(onSubmit)} className="w-56">
-            <FormControls></FormControls>
-            {steps[currentStepName]}
-        </form>
-            </FormProvider>
+            <form id="my-form" onSubmit={form.handleSubmit(onSubmit)} className="w-56">
+                <FormControls></FormControls>
+                {steps[currentStepName]}
+            </form>
+        </FormProvider>
     )
 }
 

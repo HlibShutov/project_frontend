@@ -28,10 +28,10 @@ const chartData = [
     { x: 4, y: 0.0001 },
 ]
 
-function MyChart() {
+function MyChart({ label }: { label: string }) {
     return (
         <div className="flex flex-col gap-2">
-            <h1>Gaussian curve</h1>
+            <h1>{label}</h1>
             <ChartContainer config={chartConfig} className="min-h-30">
                 <AreaChart
                     accessibilityLayer
