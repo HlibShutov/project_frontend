@@ -13,7 +13,7 @@ function MyItem({label, isOpen, setIsOpen}: {label: string, isOpen: boolean, set
             <ItemTitle>{label}</ItemTitle>
             <ItemDescription className="text-black">Action opens drawer</ItemDescription>
         </ItemContent>
-        <ItemActions>
+        <ItemActions className="animate-bounce">
             <Button onClick={() => {setIsOpen(!isOpen)}}>Action</Button>
         </ItemActions>
     </Item>

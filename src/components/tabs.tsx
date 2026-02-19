@@ -37,25 +37,28 @@ function Tabs({ children }: TabsProps) {
         setActiveTab(index);
     };
     return (
-        <div>
-            <div className="flex gap-5">
+        <div className="@container/labels w-full">
+            <div className="flex justify-center gap-5 flex-col @md/labels:flex-row">
             {childs
                 .filter((child) => isTabsChildWithLabel(child))
                 .map((child, index) =>
                     <button
                         key={index}
                         onClick={() => handleTabClick(index)}
+                        className="group-hover:opacity-50"
                         style={{ fontWeight: activeTab === index ? 'bold' : 'normal' }}
                     >
                         {child.props.label}
                         </button>
                 )}
             </div>
-            {childs.map((child, index) => (
-                <div style={{ display: activeTab === index ? 'block' : 'none' }}>
-                    {child}
-                </div>
-            ))}
+            <div className="flex justify-center content-center">
+                {childs.map((child, index) => (
+                    <div style={{ display: activeTab === index ? 'block' : 'none' }}>
+                        {child}
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }

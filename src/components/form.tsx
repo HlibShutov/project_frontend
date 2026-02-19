@@ -71,7 +71,7 @@ function FormControls() {
     const isLastStep = step === Object.keys(steps).length;
 
     return (
-        <div className='flex w-full gap-6 justify-between'>
+        <div className='flex w-full justify-between'>
             <Button
                 variant='outline'
                 type='button'

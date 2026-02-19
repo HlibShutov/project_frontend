@@ -25,25 +25,26 @@ function App() {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <main className="flex flex-col items-center justify-center h-full gap-5">
-            <div className="flex items-center flex-wrap gap-5">
+            <div className="flex items-center gap-5 w-full">
                 <Tabs>
                     <MyItem label="Item" isOpen={isOpen} setIsOpen={setIsOpen}></MyItem>
-                    <MyDrawer label="drawer" isOpen={isOpen} setIsOpen={setIsOpen}></MyDrawer>
-                    <MyTooltip label="tooltip"></MyTooltip>
-                    <MyChart label="curve"></MyChart>
+                    <MyDrawer label="Drawer" isOpen={isOpen} setIsOpen={setIsOpen}></MyDrawer>
+                    <MyTooltip label="Tooltip"></MyTooltip>
+                    <MyChart label="Curve"></MyChart>
                 </Tabs>
             </div>
-            <div className="border border-black w-150 opacity-50"></div>
-            <div className="flex items-center flex-wrap gap-5">
-                <MyForm></MyForm>
-                <div className="border border-black h-50 opacity-50"></div>
+            <div className="border border-black w-[50%] opacity-50"></div>
+            <div className="flex items-center max-md:flex-col gap-5">
+                <MyForm />
+                <div className="border border-black opacity-50 max-md:w-full max-md:h-[1px] md:w-[1px] md:h-50"></div>
                 <GenericSelect<Book> onChange={(value) => alert(value.author)} values={books} />
-                <div className="border border-black h-50 opacity-50"></div>
+                <div className="border border-black opacity-50 max-md:w-full max-md:h-[1px] md:w-[1px] md:h-50"></div>
                 <div className="flex flex-col gap-5 items-center">
-                    <MyButton href="https://ww.google.com"></MyButton>
-                    <MyButton onClick={() => alert("click")}></MyButton>
+                    <MyButton href="https://www.google.com" />
+                    <MyButton onClick={() => alert("click")} />
                 </div>
             </div>
+
         </main>
     )
 }
