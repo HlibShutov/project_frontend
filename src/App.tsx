@@ -24,7 +24,7 @@ const books: Book[] = [
 function App() {
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <main className="flex flex-col items-center justify-center h-full gap-5">
+        <main className="flex flex-col items-center justify-center h-full gap-5 w-full">
             <div className="flex items-center gap-5 w-full">
                 <Tabs>
                     <MyItem label="Item" isOpen={isOpen} setIsOpen={setIsOpen}></MyItem>

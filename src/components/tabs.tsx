@@ -38,7 +38,7 @@ function Tabs({ children }: TabsProps) {
     };
     return (
         <div className="@container/labels w-full">
-            <div className="flex justify-center gap-5 flex-col @md/labels:flex-row">
+            <div className="group flex justify-center gap-5 flex-col @md/labels:flex-row">
             {childs
                 .filter((child) => isTabsChildWithLabel(child))
                 .map((child, index) =>

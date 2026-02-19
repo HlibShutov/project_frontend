@@ -3,7 +3,7 @@ import type {formSchema} from "@/components/formSchema.ts";
 import {Field, FieldError, FieldGroup, FieldLabel} from "@/components/ui/field.tsx";
 import {Input} from "@/components/ui/input.tsx";
 import * as z from "zod"
-// import ReCAPTCHA from "react-google-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 function ShippingInfo() {
@@ -46,10 +46,10 @@ function ShippingInfo() {
                         </Field>
                     )}
                 />
-                {/*<ReCAPTCHA*/}
-                {/*    sitekey=""*/}
-                {/*    onChange={(value) => console.log("Captcha value:", value)}*/}
-                {/*/>*/}
+                <ReCAPTCHA
+                    sitekey="6LdYpG8sAAAAAMeEaFahMBCXR_wETvrqblIKZj5-"
+                    onChange={(value) => console.log("Captcha value:", value)}
+                />
             </FieldGroup>
         </div>
     )
