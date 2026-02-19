@@ -47,7 +47,7 @@ function ShippingInfo() {
                     )}
                 />
                 <ReCAPTCHA
-                    sitekey="6LdYpG8sAAAAAMeEaFahMBCXR_wETvrqblIKZj5-"
+                    sitekey="6Ld-cXEsAAAAABhj4btEmdRcxKTPy4X1bOt4aOwf"
                     onChange={(value) => console.log("Captcha value:", value)}
                 />
             </FieldGroup>
