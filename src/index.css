@@ -52,11 +52,11 @@
 
 
 html {
-  font-size: 30px;
+  font-size: 175%;
 }
 @media (max-width: 600px) {
   html {
-    font-size: 22px;
+    font-size: 100%;
   }
 }
 body {

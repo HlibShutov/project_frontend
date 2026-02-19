@@ -4,7 +4,7 @@ import {Field, FieldError, FieldGroup, FieldLabel} from "@/components/ui/field.t
 import {Input} from "@/components/ui/input.tsx";
 import * as z from "zod"
 import ReCAPTCHA from "react-google-recaptcha";
-
+import { Slider } from "@/components/ui/slider";
 
 function ShippingInfo() {
     const {
@@ -42,6 +42,24 @@ function ShippingInfo() {
                         <Field data-invalid={fieldState.invalid}>
                             <FieldLabel htmlFor={field.name}>Additional info</FieldLabel>
                             <Input {...field} id={field.name}/>
+                            {fieldState.invalid && <FieldError errors={[fieldState.error]}/>}
+                        </Field>
+                    )}
+                />
+                <Controller
+                    name="shippingInfo.nonStandartControll"
+                    control={control}
+                    render={({field, fieldState}) => (
+                        <Field data-invalid={fieldState.invalid}>
+                            <FieldLabel htmlFor={field.name}>Non standart input</FieldLabel>
+                            {field.value}
+                            <Slider
+                                min={0}
+                                max={100}
+                                step={1}
+                                defaultValue={[field.value]}
+                                onValueChange={(value) => field.onChange(value[0])}
+                            />
                             {fieldState.invalid && <FieldError errors={[fieldState.error]}/>}
                         </Field>
                     )}

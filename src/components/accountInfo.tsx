@@ -7,7 +7,9 @@ import {Input} from "@/components/ui/input.tsx";
 function AccountInfo() {
     const {
         control,
+        formState,
     } = useFormContext<z.infer<typeof formSchema>>();
+    console.log(formState.errors)
     return (
         <div>
             <FieldGroup>
@@ -55,6 +57,9 @@ function AccountInfo() {
                             <FieldLabel htmlFor={field.name}>Password</FieldLabel>
                             <Input {...field} id={field.name} type="password"/>
                             {fieldState.invalid && <FieldError errors={[fieldState.error]}/>}
+                            {formState.errors.accountInfo?.message && (
+                                <FieldError errors={[formState.errors.accountInfo]}/>
+                            )}
                         </Field>
                     )}
                 />

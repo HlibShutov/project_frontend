@@ -14,12 +14,12 @@ export const formSchema = z.object({
         return !password.includes(name);
     }, {
         message: "Password cant contain your name",
-        path: ["password"]
     }),
     shippingInfo: z.object({
         address: z.string(),
         postalCode: z.string().regex(/\d{2}-\d{3}/),
         additionalInfo: z.string(),
+        nonStandartControll: z.number()
     }),
     step: z.number(),
 })

@@ -35,7 +35,8 @@ function MyForm() {
             shippingInfo: {
                 address: "",
                 postalCode: "",
-                additionalInfo: ""
+                additionalInfo: "",
+                nonStandartControll: 0,
             },
         },
     });
