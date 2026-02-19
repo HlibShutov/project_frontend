@@ -7,6 +7,7 @@ import MyChart from "@/components/chart.tsx";
 import MyForm from "@/components/form.tsx";
 import GenericSelect from "@/components/genericComponent.tsx";
 import Tabs from "@/components/tabs.tsx";
+import MyButton from "@/components/functionOverloading.tsx";
 
 type Book = {
     id: string;
@@ -37,6 +38,11 @@ function App() {
                 <MyForm></MyForm>
                 <div className="border border-black h-50 opacity-50"></div>
                 <GenericSelect<Book> onChange={(value) => alert(value.author)} values={books} />
+                <div className="border border-black h-50 opacity-50"></div>
+                <div className="flex flex-col gap-5 items-center">
+                    <MyButton href="https://ww.google.com"></MyButton>
+                    <MyButton onClick={() => alert("click")}></MyButton>
+                </div>
             </div>
         </main>
     )
