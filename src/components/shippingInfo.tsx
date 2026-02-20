@@ -12,7 +12,7 @@ function ShippingInfo() {
     } = useFormContext<z.infer<typeof formSchema>>();
     return (
         <div>
-            <FieldGroup>
+            <FieldGroup className="flex flex-col justify-center items-center gap-2">
                 <Controller
                     name="shippingInfo.address"
                     control={control}
