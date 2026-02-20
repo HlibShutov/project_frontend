@@ -22,7 +22,7 @@ const books: Book[] = [
 ]
 
 function App() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState<boolean>(false);
     return (
         <main className="flex flex-col items-center justify-center h-full gap-5 w-full">
             <div className="flex items-center gap-5 w-full">

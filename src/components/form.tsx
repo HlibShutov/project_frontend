@@ -60,7 +60,7 @@ function MyForm() {
 
 
 function FormControls() {
-    const { setValue, trigger, getFieldState, getValues } = useFormContext();
+    const { setValue, trigger, getFieldState, getValues } = useFormContext<z.infer<typeof formSchema>>();
 
     // Get the current step from the form values
     const step = getValues('step');
